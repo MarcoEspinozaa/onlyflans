@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'onlyflans.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd74op0s24hmvgj',
+        'HOST': 'ec2-52-86-115-245.compute-1.amazonaws.com',
+        'USER': 'dtrtisqdsqxaqz',
+        'PASSWORD': 'b5c4e942c00c417e4599d697cfcceb58bcf1d36dfff28a29052690bba6c1f070',
+        'PORT': 5432,
     }
 }
 
