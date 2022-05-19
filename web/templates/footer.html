@@ -1,49 +1,54 @@
 {% load static %}
 <footer class="footer-bs">
-    <div class="row">
-        <div class="col-md-3 footer-brand animated fadeInLeft">
-            <img src="{% static 'MicrosoftTeams-image.png' %}" style="width: 120px; height: 35px; margin-left: 50px;" alt="logo" class="img-fluid mb-4">
-            <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-            <p>© 2022 OnlyFlans, All rights reserved.</p>
-        </div>
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <div class="col-md-3 text-center">
+                <img src="{% static 'MicrosoftTeams-image.png' %}" style="max-width: 50%;" alt="logo" class="img-fluid mb-3">
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+            </div>
 
-        <div style="text-align: center;" class="col-md-6 footer-nav">
-            <h2 class="mb-5">Redes sociales</h2>
-            <ul class="wrapper">
-                <li class="icon facebook">
-                    <span class="tooltip">Facebook</span>
-                    <span><i class="fab fa-facebook-f"></i></span>
-                </li>
-                <li class="icon twitter">
-                    <span class="tooltip">Twitter</span>
-                    <span><i class="fab fa-twitter"></i></span>
-                </li>
-                <li class="icon instagram">
-                    <span class="tooltip">Instagram</span>
-                    <span><i class="fab fa-instagram"></i></span>
-                </li>
-                <li class="icon github">
-                    <span class="tooltip">Github</span>
-                    <span><i class="fab fa-github"></i></span>
-                </li>
-                <li class="icon youtube">
-                    <span class="tooltip">Youtube</span>
-                    <span><i class="fab fa-youtube"></i></span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="col-md-3 footer-ns animated fadeInRight">
-            <h4>Newsletter</h4>
-            <p>Recibe ofertar increibles todas las semanas.</p>
-            <p>
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="ingresa email...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                  </span>
-                </div><!-- /input-group -->
-             </p>
+            <div style="margin-top: 15px;" class="col-md-6 footer-nav border-lef border-dark sm-text-center">
+                <h2 class="mb-5">Redes Sociales</h2>
+                <div class="wrapper">
+                    <a href="https://facebook.com/" target="_blank" class="icon facebook d-inline-block">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="icon twitter d-inline-block">
+                        <span class="tooltip">Twitter</span>
+                        <span><i class="fab fa-twitter"></i></span>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="icon instagram d-inline-block">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="icon github d-inline-block">
+                        <span class="tooltip">Github</span>
+                        <span><i class="fab fa-github"></i></span>
+                    </a>
+                    <a href="https://youtube.com/" target="_blank" class="icon youtube d-inline-block">
+                        <span class="tooltip">Youtube</span>
+                        <span><i class="fab fa-youtube pb-3"></i></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;" class="col-md-3 footer-ns animated fadeInRight">
+                <h4>Newsletter</h4>
+                <p>Recibe ofertar increibles todas las semanas.</p>
+                <p>
+                    <div class="input-group">
+                    <input type="text" class="form-control" placeholder="ingresa email...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                    </span>
+                    </div><!-- /input-group -->
+                </p>
+            </div>
         </div>
     </div>
+</footer>
+
+<footer class="footer2 text-dark">
+    <p>© Creado y desarrollado por Marco Espinoza. 2022 OnlyFlans, All rights reserved.</p>
 </footer>

@@ -1,9 +1,12 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
 <!--    Seccion destacados    -->
 <section style="margin-top: 50px; margin-bottom: 100px;">
-  <div id="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-4 mr-6">
-        <u><b><h2 style="text-align: center; margin-bottom: 50px;">Destacados</h2></b></u>
+  <div id="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-4 mx-auto align-items-stretch d-block">
+        <h2 style="text-align: center; margin-bottom: 50px; font-family: 'Pacifico', cursive;">Destacados</h2>
         <div class="screen-togo">
           <ul class="menu-items">
             <!--    Menu Item 1    -->
@@ -69,8 +72,8 @@
           </ul>
         </div>
       </div>
-      <div class="col-12 col-sm-4">
-        <u><b><h2 style="text-align: center; margin-bottom: 50px;">Tus productos</h2></b></u>
+      <div class="col-12 col-sm-4 mx-auto align-items-stretch d-block">
+        <h2 style="text-align: center; margin-bottom: 50px;font-family: 'Pacifico', cursive;">Tus carrito</h2>
         <div class="screen-cart">
           <!--  Cart Items -->
           <ul class="cart-items"></ul>
@@ -82,3 +85,4 @@
     </div>
   </div>
 </section>
+{% endblock %}

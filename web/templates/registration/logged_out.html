@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+<div class="logout" style="text-align: center;">
+    <img style="align-self: center;" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/7bb76b10004603.560e856778775.gif" width="40%" alt="">
+    <article>
+      <h1>Te desconectaste!</h1>
+      <a href="{% url 'login'%}"><button type="button" class="btn btn-primary btn-sm ml-auto">Iniciar sesion nuevamente</button></a>
+    </article>
+  </div>
+{% endblock %}

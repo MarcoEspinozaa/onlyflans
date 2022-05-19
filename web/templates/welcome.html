@@ -1,11 +1,120 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block 'content' %}
 <div class="container">
-    <div class="row">
-        <div>
-            bienvenido cliente
+    <div class="text-center mt-5 mb-5">
+        <h1 style="font-family: 'Pacifico', cursive;" class="typewrite" data-period="2000" data-type='[ "Bienvenido {{ user.get_username }} a OnlyFlans", "tenemos una lista de productos exclusivos para ti.", 
+        "Disfruta de los mejores flanes que se han creado", 
+        "Amamos lo que hacemos", "Es por esto que nuestros flanes son tan ricos" ]'>
+          <span class="wrap"></span>
+        </h1>
+      </div>
+
+        <div class="contenedor-flex mt-5">
+        {% for flan in private_flans %}
+        <div id="{{flan.slug}}" class="col-sm-12 col-md-8 mt-4">
+
+            <div class="big mb-5">
+                <article class="recipe">
+                   <div class="pizza-box">
+                       <img src="{{ flan.img_url }}" width="1500" height="1368" alt="">
+                   </div>
+                   <div class="recipe-content">
+                       <p class="recipe-tags">
+                           <span class="recipe-tag">Gluten Free</span>
+                           <span class="recipe-tag">Dulces</span>
+                       </p>
+           
+                       <h1 class="recipe-title"><a href="#">{{flan.name}}</a></h1>
+           
+                       <p class="recipe-metadata">
+                           <span class="recipe-rating">★★★★<span>☆</span></span>
+                           <span class="recipe-votes">(12 votes)</span>
+                       </p>
+           
+                       <p class="recipe-desc">{{flan.description}}</p>
+           
+                       <button class="recipe-save" type="button">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000"><path d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z" fill="currentColor"/></svg>
+                           Guardar
+                       </button>
+           
+                   </div>
+               </article>
+           </div>
+
         </div>
-    </div>
+        {% endfor %}
+        </div>
+        <img src="{% static 'team.png' %}" alt="" class="my-5">
+
+        <div class="col-sm-12 col-md-6 mt-4">
+                <div style="align-items: center;" class="cont_central mt-5">
+            <div class="cont_modal cont_modal_active">
+                <div class="cont_photo">
+                    <div class="cont_img_back">
+                        <img src="https://i0.wp.com/www.onceuponachef.com/images/2016/12/Flan.jpg?resize=760%2C950&ssl=1" alt="" />
+                    </div>
+                    <div class="cont_mins">
+                        <div class="sub_mins">
+                            <h3>50</h3>
+                            <span>Minutos</span>
+                        </div>
+                    </div>
+                    <div class="cont_servings">
+                    <h3>4</h3>
+                        <span>Porciones</span>
+                    </div>
+                    <div class="cont_detalles">
+                        <h3>Shakshuka With Feta</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis est est aliquam, sed faucibus massa lobortis. Maecenas non est justo.</p>
+                    </div>
+                </div>
+                <div class="cont_text_ingredients">
+                    <div class="cont_over_hidden">
+                
+                        <div style="text-align: center;" class="cont_tabs">
+                            <h3>Receta</h3>
+                        </div>
+                
+                        <div class="cont_text_det_preparation">
+                            <div class="cont_title_preparation">
+                                <p>PASO 1</p>
+                            </div>
+                            <div class="cont_info_preparation">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem neque corrupti debitis ipsa repellendus, quod at laborum! Saepe ut, quas, beatae qui eius minus ex vitae, atque animi adipisci sint.</p>
+                            </div>  
+                        </div>
+                        <div class="cont_text_det_preparation">
+                            <div class="cont_title_preparation">
+                                <p>PASO 2</p>
+                            </div>
+                            <div class="cont_info_preparation">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem explicabo itaque excepturi laudantium rem voluptates blanditiis, quisquam molestiae consequuntur repellendus! Numquam nobis possimus quisquam cum dolorum, culpa excepturi corrupti.</p>
+                            </div> 
+                        </div>   
+                        <div class="cont_text_det_preparation">
+                            <div class="cont_title_preparation">
+                                <p>PASO 3</p>
+                            </div>
+                            <div class="cont_info_preparation">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptas, necessitatibus ex blanditiis hic qui odio perspiciatis obcaecati facere officia cum nulla, odit unde eligendi! Nesciunt perspiciatis obcaecati nam ipsa.</p>
+                            </div> 
+                        </div>
+                        <div class="cont_text_det_preparation">
+                            <div class="cont_title_preparation">
+                                <p>PASO 4</p>
+                            </div>
+                            <div class="cont_info_preparation">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus voluptatibus dignissimos eveniet earum at iste commodi culpa dolorum, dolores saepe aliquam labore placeat ipsa vitae dolorem hic, tenetur pariatur reprehenderit!</p>
+                            </div> 
+                        </div>         
+                    </div>
+                
+                </div>
+            </div>
+                </div>
+        </div>
 </div>
 {% endblock %}
